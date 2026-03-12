@@ -23,7 +23,7 @@ const faqs = [
   {
     icon: <Zap size={18} />,
     q: "Supported Diagnostics?",
-    a: "The system analyzes radiology reports, laboratory results (PDF), MRI/CT scans, and handwritten prescriptions (JPG/PNG)."
+    a: "The system analyzes radiology reports, laboratory results (PDF), clinical scans (MRI, CT, X-ray), and handwritten prescriptions (JPG/PNG)."
   },
   {
     icon: <HelpCircle size={18} />,
