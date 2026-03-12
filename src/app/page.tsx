@@ -41,6 +41,11 @@ export default function Home() {
     }
   };
 
+  const handleResetChat = () => {
+    setMessages([]);
+    setFile(null);
+  };
+
   const handleSendMessage = async (text: string) => {
     setIsLoading(true);
     setMessages(prev => [...prev, { role: 'user', content: text }]);
@@ -189,6 +194,7 @@ export default function Home() {
               messages={messages} 
               isLoading={isLoading} 
               onSendMessage={handleSendMessage} 
+              onResetChat={handleResetChat}
             />
             <VoiceControl 
               onTranscript={handleSendMessage} 

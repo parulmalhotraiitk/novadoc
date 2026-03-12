@@ -11,11 +11,12 @@ interface Message {
 
 interface ChatInterfaceProps {
   onSendMessage: (message: string) => void;
+  onResetChat: () => void;
   messages: Message[];
   isLoading: boolean;
 }
 
-export default function ChatInterface({ onSendMessage, messages, isLoading }: ChatInterfaceProps) {
+export default function ChatInterface({ onSendMessage, onResetChat, messages, isLoading }: ChatInterfaceProps) {
   const [input, setInput] = useState('');
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
@@ -59,20 +60,44 @@ export default function ChatInterface({ onSendMessage, messages, isLoading }: Ch
           <Stethoscope size={26} className="accent-glow" /> 
           Medical <span style={{ color: 'var(--primary)' }}>Assistant</span>
         </h2>
-        <div style={{ 
-          background: 'rgba(56, 189, 248, 0.05)', 
-          padding: '0.4rem 1rem', 
-          borderRadius: '2rem', 
-          fontSize: '0.75rem', 
-          color: 'var(--primary)',
-          border: '1px solid var(--glass-border)',
-          display: 'flex',
-          alignItems: 'center',
-          gap: '0.5rem',
-          fontWeight: 600
-        }}>
-          <div style={{ width: 8, height: 8, borderRadius: '50%', background: 'var(--primary)', boxShadow: '0 0 10px var(--primary)' }}></div>
-          LIVE ANALYTICS
+        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+          <motion.button
+            whileHover={{ scale: 1.05, background: 'rgba(255, 255, 255, 0.08)' }}
+            whileTap={{ scale: 0.95 }}
+            onClick={onResetChat}
+            style={{
+              padding: '0.4rem 1rem',
+              borderRadius: '0.75rem',
+              border: '1px solid var(--border)',
+              background: 'rgba(255, 255, 255, 0.03)',
+              color: 'var(--text-muted)',
+              fontSize: '0.75rem',
+              fontWeight: 700,
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.4rem',
+              transition: 'all 0.2s ease'
+            }}
+          >
+            <Sparkles size={14} /> NEW CHAT
+          </motion.button>
+          
+          <div style={{ 
+            background: 'rgba(56, 189, 248, 0.05)', 
+            padding: '0.4rem 1rem', 
+            borderRadius: '2rem', 
+            fontSize: '0.75rem', 
+            color: 'var(--primary)',
+            border: '1px solid var(--glass-border)',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '0.5rem',
+            fontWeight: 600
+          }}>
+            <div style={{ width: 8, height: 8, borderRadius: '50%', background: 'var(--primary)', boxShadow: '0 0 10px var(--primary)' }}></div>
+            LIVE ANALYTICS
+          </div>
         </div>
       </div>
       

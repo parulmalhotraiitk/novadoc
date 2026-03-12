@@ -1,4 +1,4 @@
-const CACHE_NAME = 'novadoc-v4';
+const CACHE_NAME = 'novadoc-v5';
 const ASSETS_TO_CACHE = [
   '/',
   '/manifest.json',
