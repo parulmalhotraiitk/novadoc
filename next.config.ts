@@ -1,7 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  env: {
+    APP_AWS_ACCESS_KEY_ID: process.env.APP_AWS_ACCESS_KEY_ID || '',
+    APP_AWS_SECRET_ACCESS_KEY: process.env.APP_AWS_SECRET_ACCESS_KEY || '',
+    APP_AWS_REGION: process.env.APP_AWS_REGION || 'us-east-1',
+  }
 };
 
 export default nextConfig;
