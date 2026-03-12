@@ -4,6 +4,10 @@ import { InvokeModelCommand } from "@aws-sdk/client-bedrock-runtime";
 
 export async function POST(request: Request) {
   try {
+    const hasAccessKey = !!process.env.APP_AWS_ACCESS_KEY_ID;
+    const hasSecretKey = !!process.env.APP_AWS_SECRET_ACCESS_KEY;
+    console.log(`[Bedrock Auth Scan] Key: ${hasAccessKey}, Secret: ${hasSecretKey}`);
+
     const { prompt, base64Image, fileName, fileType } = await request.json();
 
     let content: any[] = [{ text: prompt }];
