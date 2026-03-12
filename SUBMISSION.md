@@ -25,7 +25,7 @@ NovaDoc is an enterprise-grade AI medical assistant designed to democratize acce
    - *If private, please share with: testing@devpost.com and Amazon-Nova-hackathon@amazon.com*
 2. **Demo Link**: [Insert Your Deployed URL, e.g., Vercel Link]
    - **Note**: For the best experience (including PWA installation), please access via **HTTPS**.
-3. **AWS Credentials**: The application requires `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, and `AWS_REGION` (us-east-1) to be set in the environment.
+3. **AWS Credentials**: The application requires `APP_AWS_ACCESS_KEY_ID`, `APP_AWS_SECRET_ACCESS_KEY`, and `APP_AWS_REGION` (us-east-1) to be set in the environment.
 4. **Local Setup**:
    ```bash
    npm install

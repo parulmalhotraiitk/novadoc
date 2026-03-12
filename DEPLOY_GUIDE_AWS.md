@@ -13,11 +13,9 @@ Amplify works best when connected to a Git repository.
    ```
 
 2. **Create a Repository**:
-   - Go to [GitHub](https://github.com) and create a new repository named `novadoc`.
-   - Run these commands (replace `USER` with your username):
    ```bash
-   git remote add origin https://github.com/USER/novadoc.git
    git branch -M main
+   git remote add origin https://github.com/parulmalhotraiitk/novadoc.git
    git push -u origin main
    ```
 
@@ -29,9 +27,9 @@ Amplify works best when connected to a Git repository.
 5. **Environment Variables**: 
    - Click **"Advanced settings"** during setup.
    - Add your keys here:
-     - `AWS_ACCESS_KEY_ID`
-     - `AWS_SECRET_ACCESS_KEY`
-     - `AWS_REGION` (us-east-1)
+     - `APP_AWS_ACCESS_KEY_ID`
+     - `APP_AWS_SECRET_ACCESS_KEY`
+     - `APP_AWS_REGION` (us-east-1)
 6. Click **"Save and Deploy"**.
 
 ## Phase 3: Final Verification
