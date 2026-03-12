@@ -95,7 +95,7 @@ export default function ChatInterface({ onSendMessage, messages, isLoading }: Ch
                  <MessageSquare size={56} style={{ margin: '0 auto' }} />
               </div>
               <p style={{ fontWeight: 600, color: 'white', fontSize: '1.1rem' }}>Awaiting Medical Inquiry</p>
-              <p style={{ fontSize: '0.9rem', marginTop: '0.5rem', maxWidth: '300px' }}>"Provide an executive summary of the uploaded MRI scan findings."</p>
+              <p style={{ fontSize: '0.9rem', marginTop: '0.5rem', maxWidth: '300px' }}>"Provide a detailed clinical summary of the uploaded medical documents."</p>
             </motion.div>
           </div>
         ) : (
